@@ -9,6 +9,7 @@ pipeline:
     - dapper ci
 
   publish:
+    image: plugins/docker
     dockerfile: package/Dockerfile
     repo: cloudnautique/ci-cdtesting
     tag: latest
