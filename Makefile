@@ -9,7 +9,6 @@ TARGETS := $(shell ls scripts)
 
 $(TARGETS): .dapper
 	./.dapper $@
-	if [ -n "${DRONE_TAG}" ]; then cp -r ./bin/* ./package/ ;fi
 
 trash: .dapper
 	./.dapper -m bind trash
