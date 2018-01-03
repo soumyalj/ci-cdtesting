@@ -7,3 +7,12 @@ pipeline:
     - /var/run/docker.sock:/var/run/docker.sock
     commands:
     - dapper ci
+
+  publish:
+    dockerfile: package/Dockerfile
+    repo: cloudnautique/ci-cdtesting
+    tag: latest
+    secrets: [docker_username, docker_password]
+    when:
+      branch: master
+      event: tag
