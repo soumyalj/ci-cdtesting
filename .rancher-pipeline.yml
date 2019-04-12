@@ -3,5 +3,5 @@ stages:
   steps:
   - runScriptConfig:
       image: golang:latest
-      shellScript: sleep 60
+      shellScript: sleep 25
 timeout: 60
