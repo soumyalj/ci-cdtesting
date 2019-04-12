@@ -6,4 +6,17 @@ stages:
       shellScript: |-
         ls
         echo "Hello Rancher"
+- name: test2
+  steps:
+  - runScriptConfig:
+      image: busybox:latest
+      shellScript: |-
+        ls
+        ls
+        ls
+- name: test3
+  steps:
+  - runScriptConfig:
+      image: busybox:latest
+      shellScript: echo "test3"
 timeout: 60
