@@ -1,5 +1,5 @@
 stages:
-- name: sleep
+- name: test
   steps:
   - runScriptConfig:
       image: busybox:latest
